@@ -2,112 +2,166 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url("image.png");
+    background-image: url("image");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     color: white;
     scroll-behavior: smooth;
-    background-color: rgba(0, 0, 0, 0.5);
-    background-blend-mode: darken;
-}
-
-.header {
-    background-color: #164e05;
-    color: white;
-    padding: 15px 0;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-img.logo {
-    width: 50%;
-    height: auto;
-    display: block;
-    margin: 0 auto 20px auto;
-}
-
-.button, .button1 {
-    display: inline-block;
-    padding: 20px 40px;
-    font-size: 16px;
-    border-radius: 8px;
-    position: relative; /* Ajuste a posição para dispositivos menores */
-    top: 10px; /* Ajuste conforme necessário */
-    right: 10px; /* Ajuste conforme necessário */
-    text-shadow: rgba(0, 0, 0, 0.856) 2px 2px 5px;
-    box-shadow: rgba(0, 0, 0, 0.575) 2px 2px 5px;
+    
+    /* Cor preta por cima da imagem com opacidade */
+    background-color: rgba(0, 0, 0, 0.5); /* Aumente ou diminua o valor para ajustar a escuridão */
+    background-blend-mode: darken; /* Mistura as cores da imagem com a cor preta */
 }
 
 .button {
+    display: inline-block;
+    padding: 30px 60px;
+    font-size: 20px;
     background-color: #01b6ad;
     color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    position: absolute; /* ou fixed, dependendo do seu caso */
+    top: 155px; /* ajuste conforme necessário */
+    right: 350px; /* ajuste conforme necessário */
+    z-index: 1000; /* maior que o z-index de outros elementos */
+    text-shadow: rgba(0, 0, 0, 0.856) 2px 2px 5px;
+    box-shadow: rgba(0, 0, 0, 0.575) 2px 2px 5px;
 }
 
 .button:hover {
     background-color: #009191;
 }
-
 .button1 {
+    display: inline-block;
+    padding: 30px 75px;
+    font-size: 20px;
     background-color: #028b14;
     color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    position: absolute; /* ou fixed, dependendo do seu caso */
+    top: 350px; /* ajuste conforme necessário */
+    right: 350px; /* ajuste conforme necessário */
+    z-index: 1100; /* maior que o z-index de outros elementos */
+    text-shadow: rgba(0, 0, 0, 0.856) 2px 2px 5px;
+    box-shadow: rgba(0, 0, 0, 0.637) 2px 4px 5px;
 }
 
 .button1:hover {
     background-color: #01580f;
 }
 
+header {
+    background-color: #164e05;
+    color: white;
+    padding: 30px 0; /* Aumenta o padding para mais espaço */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao header */
+}
+h16 {
+    font-size: 3em;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.589); /* Deslocamento horizontal, vertical, desfoque e cor */
+}
+
+main {
+    padding: 40px 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para facilitar a leitura */
+    min-height: 100vh; /* Garante que o main ocupe pelo menos 100% da altura da viewport */
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: #09767e;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.589); /* Deslocamento horizontal, vertical, desfoque e cor */
+}
+
+h1, h2 {
+    margin: 0;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); /* Aumenta o desfoque da sombra */
+}
+
+img.logo {
+    width: 70%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto; /* Centraliza a logo e adiciona espaço abaixo dela */
+    
+}
+
 .content {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-    max-width: 100%;
-    margin: 0 auto 20px auto;
-    padding: 20px;
+    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+    gap: 20px; /* Espaço entre as colunas */
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    padding: 40px;
     background-color: rgba(37, 37, 37, 0.1);
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     opacity: 0;
     transition: opacity 1.5s ease-in-out;
 }
 
-img.image-right, img.image-left {
+img.image-right {
+    grid-column: 2; /* Coloca a imagem na segunda coluna */
     width: 100%;
     height: auto;
+    justify-self: end; /* Alinha a imagem à direita da coluna */
+}
+
+img.image-left {
+    grid-column: 1; /* Coloca a imagem na primeira coluna */
+    width: 100%;
+    height: auto;
+    justify-self: start; /* Alinha a imagem à esquerda da coluna */
+}
+img.image-left image2 {
+    grid-column: 1; /* Coloca a imagem na primeira coluna */
+    width: 100%;
+    height: auto;
+    justify-self: start; /* Alinha a imagem à esquerda da coluna */
 }
 
 p {
-    font-size: 1em;
-    line-height: 1.4;
-    margin: 10px 0;
-    text-indent: 20px;
+    grid-column: 1 / span 2; /* O texto ocupa ambas as colunas */
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin: 20px 0;
+    text-indent: 40px;
+    
 }
 
 blockquote {
     border-left: 5px solid #00bcd4;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo semi-transparente */
+    padding: 20px; /* Aumenta o padding interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra sutil */
 }
 
 @media (max-width: 768px) {
-    header {
-        padding: 10px 0;
-    }
-
-    .button, .button1 {
-        position: static; /* Muda a posição dos botões */
-        margin: 10px auto;
-        display: block;
-        text-align: center;
-    }
-
     .content {
-        padding: 10px;
+        grid-template-columns: 1fr; /* Coluna única para dispositivos móveis */
     }
-
+    
     img.image-right, img.image-left {
-        margin: 10px 0;
+        width: 100%; /* Ajuste para telas menores */
+        grid-column: 1; /* Imagens ocupam a única coluna */
+        margin: 20px 0; /* Espaço entre imagens e texto */
     }
+}
+
+.content.show {
+    opacity: 1;
 }
