@@ -18,13 +18,14 @@ header {
 }
 a img {
     max-width: 100%;
-    height: 40PX;
+    height: 40px;
     top: 10px;
     left: 40px;
     z-index: 1000;
     position: absolute;
-    box-shadow: black 2px 2px 5px 1px 1px;
+    box-shadow: black 2px 2px 5px 1px;
 }
+
 main {
     flex: 1 0 auto; /* Faz o main ocupar o espaço restante */
     padding: 0;
@@ -49,14 +50,39 @@ h1 {
     margin: 0;
     font-size: 24px;
     z-index: auto;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.589); /* Deslocamento horizontal, vertical, desfoque e cor */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.589);
 }
 
 footer p {
     margin: 0;
     font-size: 20px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.589); /* Deslocamento horizontal, vertical, desfoque e cor */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.589);
 }
+
 span {
     color: red;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 0;
+    }
+
+    a img {
+        left: 20px;
+        height: 30px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    footer p {
+        font-size: 16px;
+    }
+
+    iframe#product-frame {
+        height: calc(100vh - 100px);
+    }
 }
