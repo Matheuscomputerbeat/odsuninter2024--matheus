@@ -60,3 +60,17 @@ footer p {
 span {
     color: red;
 }
+@media (max-width: 768px) {
+    .content {
+        grid-template-columns: 1fr; /* Coluna única para dispositivos móveis */
+    }
+    a img {
+        max-width: 100%;
+        height: 40PX;
+        top: 10px;
+        left: 0px;
+        z-index: 1000;
+        position: absolute;
+        box-shadow: black 2px 2px 5px 1px 1px;
+    }
+}
