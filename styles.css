@@ -8,10 +8,8 @@ body {
     background-position: center;
     color: white;
     scroll-behavior: smooth;
-    
-    /* Cor preta por cima da imagem com opacidade */
-    background-color: rgba(0, 0, 0, 0.5); /* Aumente ou diminua o valor para ajustar a escuridão */
-    background-blend-mode: darken; /* Mistura as cores da imagem com a cor preta */
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
 }
 
 .button {
@@ -23,10 +21,10 @@ body {
     text-align: center;
     text-decoration: none;
     border-radius: 10px;
-    position: absolute; /* ou fixed, dependendo do seu caso */
-    top: 155px; /* ajuste conforme necessário */
-    right: 350px; /* ajuste conforme necessário */
-    z-index: 1000; /* maior que o z-index de outros elementos */
+    position: absolute;
+    top: 155px;
+    right: 350px;
+    z-index: 1000;
     text-shadow: rgba(0, 0, 0, 0.856) 2px 2px 5px;
     box-shadow: rgba(0, 0, 0, 0.575) 2px 2px 5px;
 }
@@ -34,6 +32,7 @@ body {
 .button:hover {
     background-color: #009191;
 }
+
 .button1 {
     display: inline-block;
     padding: 30px 75px;
@@ -43,10 +42,10 @@ body {
     text-align: center;
     text-decoration: none;
     border-radius: 10px;
-    position: absolute; /* ou fixed, dependendo do seu caso */
-    top: 350px; /* ajuste conforme necessário */
-    right: 350px; /* ajuste conforme necessário */
-    z-index: 1100; /* maior que o z-index de outros elementos */
+    position: absolute;
+    top: 350px;
+    right: 350px;
+    z-index: 1100;
     text-shadow: rgba(0, 0, 0, 0.856) 2px 2px 5px;
     box-shadow: rgba(0, 0, 0, 0.637) 2px 4px 5px;
 }
@@ -58,20 +57,21 @@ body {
 header {
     background-color: #164e05;
     color: white;
-    padding: 30px 0; /* Aumenta o padding para mais espaço */
+    padding: 30px 0;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao header */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
+
 h16 {
     font-size: 3em;
     margin: 0;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.589); /* Deslocamento horizontal, vertical, desfoque e cor */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.589);
 }
 
 main {
     padding: 40px 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para facilitar a leitura */
-    min-height: 100vh; /* Garante que o main ocupe pelo menos 100% da altura da viewport */
+    background-color: rgba(0, 0, 0, 0.5);
+    min-height: 100vh;
     box-sizing: border-box;
 }
 
@@ -83,26 +83,25 @@ footer {
     position: relative;
     width: 100%;
     bottom: 0;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.589); /* Deslocamento horizontal, vertical, desfoque e cor */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.589);
 }
 
 h1, h2 {
     margin: 0;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); /* Aumenta o desfoque da sombra */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
 }
 
 img.logo {
     width: 70%;
     height: auto;
     display: block;
-    margin: 0 auto 20px auto; /* Centraliza a logo e adiciona espaço abaixo dela */
-    
+    margin: 0 auto 20px auto;
 }
 
 .content {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
-    gap: 20px; /* Espaço entre as colunas */
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
     max-width: 800px;
     margin: 0 auto 60px auto;
     padding: 40px;
@@ -114,51 +113,62 @@ img.logo {
 }
 
 img.image-right {
-    grid-column: 2; /* Coloca a imagem na segunda coluna */
+    grid-column: 2;
     width: 100%;
     height: auto;
-    justify-self: end; /* Alinha a imagem à direita da coluna */
+    justify-self: end;
 }
 
 img.image-left {
-    grid-column: 1; /* Coloca a imagem na primeira coluna */
+    grid-column: 1;
     width: 100%;
     height: auto;
-    justify-self: start; /* Alinha a imagem à esquerda da coluna */
-}
-img.image-left image2 {
-    grid-column: 1; /* Coloca a imagem na primeira coluna */
-    width: 100%;
-    height: auto;
-    justify-self: start; /* Alinha a imagem à esquerda da coluna */
+    justify-self: start;
 }
 
 p {
-    grid-column: 1 / span 2; /* O texto ocupa ambas as colunas */
+    grid-column: 1 / span 2;
     font-size: 1.1em;
     line-height: 1.6;
     margin: 20px 0;
     text-indent: 40px;
-    
 }
 
 blockquote {
     border-left: 5px solid #00bcd4;
-    background-color: rgba(255, 255, 255, 0.2); /* Fundo semi-transparente */
-    padding: 20px; /* Aumenta o padding interno */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+/* RESPONSIVIDADE */
 @media (max-width: 768px) {
-    .content {
-        grid-template-columns: 1fr; /* Coluna única para dispositivos móveis */
+    .button, .button1 {
+        right: 10px;
+        top: unset;
+        position: fixed;
+        bottom: 20px;
+        width: auto;
+        padding: 15px 30px;
     }
-    
+
+    h16 {
+        font-size: 2em;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
     img.image-right, img.image-left {
-        width: 100%; /* Ajuste para telas menores */
-        grid-column: 1; /* Imagens ocupam a única coluna */
-        margin: 20px 0; /* Espaço entre imagens e texto */
+        grid-column: 1;
+        margin: 10px 0;
+    }
+
+    footer {
+        font-size: 14px;
     }
 }
 
