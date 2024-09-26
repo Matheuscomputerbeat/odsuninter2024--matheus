@@ -8,6 +8,9 @@ body {
     background-position: center;
     color: white;
     scroll-behavior: smooth;
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 1.5s ease-in-out; /* Transição suave para a mudança de opacidade */
+}
     
     /* Cor preta por cima da imagem com opacidade */
     background-color: rgba(0, 0, 0, 0.5); /* Aumente ou diminua o valor para ajustar a escuridão */
@@ -154,6 +157,8 @@ blockquote {
     .content {
         grid-template-columns: 1fr; /* Coluna única para dispositivos móveis */
         scroll-behavior: smooth;
+        opacity: 0; /* Inicialmente invisível */
+    transition: opacity 1.5s ease-in-out; /* Transição suave para a mudança de opacidade */
     }
     
     img.logo {
