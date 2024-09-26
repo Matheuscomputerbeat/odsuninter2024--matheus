@@ -13,6 +13,12 @@ body {
     background-color: rgba(0, 0, 0, 0.5); /* Aumente ou diminua o valor para ajustar a escuridão */
     background-blend-mode: darken; /* Mistura as cores da imagem com a cor preta */
 }
+.proconsvate {
+    font-size: 0.8em; /* Ajusta o tamanho do texto para ser menor que o principal */
+    font-weight: normal; /* Mantém o peso normal do texto */
+    margin-left: 10px; /* Adiciona um espaçamento entre o título e o texto adicional */
+    color: #ffeb3b; /* Cor opcional para destacar o texto */
+}
 
 .button {
     display: inline-block;
