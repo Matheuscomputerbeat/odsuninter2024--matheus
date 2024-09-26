@@ -151,10 +151,16 @@ blockquote {
 }
 
 @media (max-width: 768px) {
+    .body {
+        opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    }
     .content {
         grid-template-columns: 1fr; /* Coluna única para dispositivos móveis */
         opacity: 0; /* Inicialmente invisível */
     transition: opacity 1.5s ease-in-out; /* Transição suave para a mudança de opacidade */
+        opacity: 0;
+    transition: opacity 1.5s ease-in-out;
     }
     img.logo {
         width: 50%;
