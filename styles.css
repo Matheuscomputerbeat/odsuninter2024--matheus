@@ -8,8 +8,6 @@ body {
     background-position: center;
     color: white;
     scroll-behavior: smooth;
-    opacity: 0; /* Inicialmente invisível */
-    transition: opacity 1.5s ease-in-out; /* Transição suave para a mudança de opacidade */
 }
     
     /* Cor preta por cima da imagem com opacidade */
