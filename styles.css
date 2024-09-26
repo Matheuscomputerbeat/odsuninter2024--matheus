@@ -183,13 +183,18 @@ blockquote {
         box-shadow: rgba(0, 0, 0, 0.575) 2px 2px 5px;
     }
     header {
-        background-color: #164e05;
-        color: white;
-        padding: 10px 0; /* Aumenta o padding para mais espaço */
-        text-align: center;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao header */
-        font-size: medium;
-    }
+    background-color: #164e05;
+    color: white;
+    padding: 10px 20px; /* Aumenta o padding para mais espaço */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao header */
+    font-size: medium;
+    position: fixed; /* Fixar o header no topo da página */
+    width: 100%; /* Garante que o header ocupe toda a largura da página */
+    top: 0; /* Mantém o header no topo */
+    left: 0; /* Garante que o header se alinhe à esquerda */
+    z-index: 1000; /* Garante que o header esteja sobre outros elementos */
+    overflow: hidden; /* Impede que o texto ultrapasse o container */
     .button:hover {
         background-color: #009191;
     }
