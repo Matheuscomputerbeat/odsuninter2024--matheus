@@ -153,13 +153,15 @@ blockquote {
 @media (max-width: 768px) {
     .content {
         grid-template-columns: 1fr; /* Coluna única para dispositivos móveis */
+        scroll-behavior: smooth;
     }
+    
     img.logo {
         width: 50%;
         height: auto;
         display: block;
         margin: 0 auto 20px auto; /* Centraliza a logo e adiciona espaço abaixo dela */
-        transform: translate(-70px, -10px);
+        transform: translate(-70px, -17px);
     
     }
     img.image-right, img.image-left {
