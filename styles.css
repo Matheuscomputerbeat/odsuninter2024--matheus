@@ -189,7 +189,7 @@ blockquote {
         padding: 10px 0; /* Aumenta o padding para mais espaço */
         text-align: center;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao header */
-        font-size: small;
+        font-size: medium;
     }
     .button:hover {
         background-color: #009191;
