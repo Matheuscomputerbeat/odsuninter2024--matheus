@@ -61,7 +61,6 @@ header {
     padding: 30px 0; /* Aumenta o padding para mais espaço */
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao header */
-    
 }
 h16 {
     font-size: 3em;
@@ -178,8 +177,8 @@ blockquote {
         text-decoration: none;
         border-radius: 10px;
         position: absolute; /* ou fixed, dependendo do seu caso */
-        transform: translate(320px, -10px);
-        z-index: 1100; /* maior que o z-index de outros elementos */
+        transform: translate(320px, 70px);
+        z-index: 1000; /* maior que o z-index de outros elementos */
         text-shadow: rgba(0, 0, 0, 0.856) 2px 2px 5px;
         box-shadow: rgba(0, 0, 0, 0.575) 2px 2px 5px;
     }
@@ -204,7 +203,7 @@ blockquote {
         text-decoration: none;
         border-radius: 10px;
         position: absolute; /* ou fixed, dependendo do seu caso */
-        transform: translate(320px, -40px);
+        transform: translate(320px, -50px);
         z-index: 1100; /* maior que o z-index de outros elementos */
         text-shadow: rgba(0, 0, 0, 0.856) 2px 2px 5px;
         box-shadow: rgba(0, 0, 0, 0.637) 2px 4px 5px;
