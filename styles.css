@@ -183,6 +183,7 @@ blockquote {
         z-index: 1000; /* maior que o z-index de outros elementos */
         text-shadow: rgba(0, 0, 0, 0.856) 2px 2px 5px;
         box-shadow: rgba(0, 0, 0, 0.575) 2px 2px 5px;
+        scroll-behavior: smooth;
     }
     header {
         background-color: #164e05;
@@ -191,6 +192,7 @@ blockquote {
         text-align: center;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao header */
         font-size: medium;
+        scroll-behavior: smooth;
     }
     .button:hover {
         background-color: #009191;
@@ -209,6 +211,7 @@ blockquote {
         z-index: 1100; /* maior que o z-index de outros elementos */
         text-shadow: rgba(0, 0, 0, 0.856) 2px 2px 5px;
         box-shadow: rgba(0, 0, 0, 0.637) 2px 4px 5px;
+        scroll-behavior: smooth;
     }
     
     .button1:hover {
