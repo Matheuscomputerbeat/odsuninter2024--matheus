@@ -204,7 +204,7 @@ blockquote {
         text-decoration: none;
         border-radius: 10px;
         position: absolute; /* ou fixed, dependendo do seu caso */
-        transform: translate(320px, -50px);
+        transform: translate(320px, 40px);
         z-index: 1100; /* maior que o z-index de outros elementos */
         text-shadow: rgba(0, 0, 0, 0.856) 2px 2px 5px;
         box-shadow: rgba(0, 0, 0, 0.637) 2px 4px 5px;
