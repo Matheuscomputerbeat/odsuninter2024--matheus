@@ -171,7 +171,7 @@ blockquote {
     .button {
         padding: 10px 45px;
         font-size: 18px;
-        top: 120px; /* ajuste conforme necessário */
+        top: 50px; /* ajuste conforme necessário */
         right: 10vw; /* 10% da largura da viewport */
         z-index: 1100;
     }
