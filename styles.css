@@ -161,7 +161,7 @@ blockquote {
         height: auto;
         display: block;
         margin: 0 auto 20px auto; /* Centraliza a logo e adiciona espaço abaixo dela */
-        transform: translate(-70px, 17px);
+        transform: translate(-70px, -17px);
     
     }
     img.image-right, img.image-left {
