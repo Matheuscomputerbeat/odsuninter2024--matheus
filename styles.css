@@ -167,54 +167,56 @@ blockquote {
         grid-column: 1; /* Imagens ocupam a única coluna */
         margin: 20px 0; /* Espaço entre imagens e texto */
     }
-    .button {
-        display: inline-block;
-        padding: 10px 45px;
-        font-size: 20px;
-        background-color: #01b6ad;
-        color: white;
-        text-align: center;
-        text-decoration: none;
-        border-radius: 10px;
-        position: fixed; /* ou fixed, dependendo do seu caso */
-        transform: translate(320px, -50px);
-        z-index: 1001; /* maior que o z-index de outros elementos */
-        text-shadow: rgba(0, 0, 0, 0.856) 2px 2px 5px;
-        box-shadow: rgba(0, 0, 0, 0.575) 2px 2px 5px;
-    }
-    header {
-        background-color: #164e05;
-        color: white;
-        padding: 10px 0; /* Aumenta o padding para mais espaço */
-        text-align: center;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao header */
-        font-size: medium;
-    }
-    .button:hover {
-        background-color: #009191;
-    }
-    .button1 {
-        display: inline-block;
-        padding: 10px 63px;
-        font-size: 20px;
-        background-color: #028b14;
-        color: white;
-        text-align: center;
-        text-decoration: none;
-        border-radius: 10px;
-        position: absolute; /* ou fixed, dependendo do seu caso */
-        transform: translate(320px, -10px);
-        z-index: 1102; /* maior que o z-index de outros elementos */
-        text-shadow: rgba(0, 0, 0, 0.856) 2px 2px 5px;
-        box-shadow: rgba(0, 0, 0, 0.637) 2px 4px 5px;
-    }
-    
-    .button1:hover {
-        background-color: #01580f;
-    }
-    
-
+    /* Configuração base para ambos os botões */
+.button, .button1 {
+    display: inline-block;
+    padding: 10px 45px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    position: absolute; /* ou fixed, dependendo do seu caso */
+    z-index: 1001; /* Maior que o z-index de outros elementos */
+    text-shadow: rgba(0, 0, 0, 0.856) 2px 2px 5px;
+    box-shadow: rgba(0, 0, 0, 0.575) 2px 2px 5px;
 }
+
+/* Estilos específicos para o botão */
+.button {
+    background-color: #01b6ad;
+    top: 100px; /* Defina a distância do topo da página ou do elemento pai */
+    left: 320px; /* Defina a distância da esquerda da página ou do elemento pai */
+}
+
+.button:hover {
+    background-color: #009191;
+}
+
+/* Estilos específicos para o botão1 */
+.button1 {
+    background-color: #028b14;
+    top: 150px; /* Ajuste a distância do topo para que fique abaixo do .button */
+    left: 320px; /* Deve estar alinhado horizontalmente com .button */
+    z-index: 1102; /* Maior que o z-index da .button */
+}
+
+.button1:hover {
+    background-color: #01580f;
+}
+
+/* Estilos do header e conteúdo */
+header {
+    background-color: #164e05;
+    color: white;
+    padding: 10px 0; /* Aumenta o padding para mais espaço */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao header */
+    font-size: medium;
+}
+
 .content.show {
     opacity: 1;
+}
+
 }
