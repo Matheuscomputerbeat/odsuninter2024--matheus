@@ -193,7 +193,7 @@ blockquote {
     width: 100%; /* Garante que o header ocupe toda a largura da página */
     top: 0; /* Mantém o header no topo */
     left: 0; /* Garante que o header se alinhe à esquerda */
-    z-index: 1000; /* Garante que o header esteja sobre outros elementos */
+    z-index: 8797068746; /* Garante que o header esteja sobre outros elementos */
     overflow: hidden; /* Impede que o texto ultrapasse o container */
     .button:hover {
         background-color: #009191;
