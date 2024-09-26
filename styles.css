@@ -157,9 +157,6 @@ blockquote {
     .content {
         grid-template-columns: 1fr; /* Coluna única para dispositivos móveis */
         opacity: 0; /* Inicialmente invisível */
-    transition: opacity 1.5s ease-in-out; /* Transição suave para a mudança de opacidade */
-        opacity: 0;
-    transition: opacity 1.5s ease-in-out;
     }
     img.logo {
         width: 50%;
@@ -199,7 +196,6 @@ blockquote {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao header */
         font-size: medium;
         opacity: 0;
-    transition: opacity 1.5s ease-in-out;
     }
     .button:hover {
         background-color: #009191;
