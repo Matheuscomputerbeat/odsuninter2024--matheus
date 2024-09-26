@@ -61,6 +61,7 @@ header {
     padding: 30px 0; /* Aumenta o padding para mais espaço */
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao header */
+    
 }
 h16 {
     font-size: 3em;
@@ -188,7 +189,7 @@ blockquote {
         padding: 10px 0; /* Aumenta o padding para mais espaço */
         text-align: center;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao header */
-        font-size: medium;
+        font-size: small;
     }
     .button:hover {
         background-color: #009191;
