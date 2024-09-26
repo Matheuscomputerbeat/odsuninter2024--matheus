@@ -8,7 +8,6 @@ body {
     background-position: center;
     color: white;
     scroll-behavior: smooth;
-}
     
     /* Cor preta por cima da imagem com opacidade */
     background-color: rgba(0, 0, 0, 0.5); /* Aumente ou diminua o valor para ajustar a escuridão */
@@ -154,17 +153,15 @@ blockquote {
 @media (max-width: 768px) {
     .content {
         grid-template-columns: 1fr; /* Coluna única para dispositivos móveis */
-        scroll-behavior: smooth;
         opacity: 0; /* Inicialmente invisível */
     transition: opacity 1.5s ease-in-out; /* Transição suave para a mudança de opacidade */
     }
-    
     img.logo {
         width: 50%;
         height: auto;
         display: block;
         margin: 0 auto 20px auto; /* Centraliza a logo e adiciona espaço abaixo dela */
-        transform: translate(-70px, -17px);
+        transform: translate(-70px, 17px);
     
     }
     img.image-right, img.image-left {
@@ -186,7 +183,6 @@ blockquote {
         z-index: 1000; /* maior que o z-index de outros elementos */
         text-shadow: rgba(0, 0, 0, 0.856) 2px 2px 5px;
         box-shadow: rgba(0, 0, 0, 0.575) 2px 2px 5px;
-        scroll-behavior: smooth;
     }
     header {
         background-color: #164e05;
@@ -195,7 +191,6 @@ blockquote {
         text-align: center;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao header */
         font-size: medium;
-        scroll-behavior: smooth;
     }
     .button:hover {
         background-color: #009191;
@@ -214,7 +209,6 @@ blockquote {
         z-index: 1100; /* maior que o z-index de outros elementos */
         text-shadow: rgba(0, 0, 0, 0.856) 2px 2px 5px;
         box-shadow: rgba(0, 0, 0, 0.637) 2px 4px 5px;
-        scroll-behavior: smooth;
     }
     
     .button1:hover {
