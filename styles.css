@@ -160,19 +160,22 @@ blockquote {
     .content {
         grid-template-columns: 1fr; /* Coluna única para dispositivos móveis */
     }
+
     img.logo {
         width: 50%;
         height: auto;
         display: block;
         margin: 0 auto 20px auto; /* Centraliza a logo e adiciona espaço abaixo dela */
-        transform: translate(-70px, 10px);
-    
+        transform: translate(-70px, 10px); /* Ajuste de posição */
     }
+
     img.image-right, img.image-left {
-        width: 100%; /* Ajuste para telas menores */
+        width: 100%; /* Imagens ocupam toda a largura da coluna */
         grid-column: 1; /* Imagens ocupam a única coluna */
         margin: 20px 0; /* Espaço entre imagens e texto */
     }
+
+    /* Estilo do primeiro botão */
     .button {
         display: inline-block;
         padding: 10px 45px;
@@ -182,12 +185,15 @@ blockquote {
         text-align: center;
         text-decoration: none;
         border-radius: 10px;
-        position: absolute; /* ou fixed, dependendo do seu caso */
-        transform: translate(320px, 70px);
-        z-index: 1000; /* maior que o z-index de outros elementos */
+        position: absolute; 
+        transform: translate(0px, 50px); /* Ajuste para centralizar no layout mobile */
+        left: 50%; /* Centraliza horizontalmente */
+        transform: translateX(-50%); /* Garante a centralização */
+        z-index: 1000; 
         text-shadow: rgba(0, 0, 0, 0.856) 2px 2px 5px;
         box-shadow: rgba(0, 0, 0, 0.575) 2px 2px 5px;
     }
+
     header {
         background-color: #164e05;
         color: white;
@@ -196,9 +202,12 @@ blockquote {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao header */
         font-size: medium;
     }
+
     .button:hover {
         background-color: #009191;
     }
+
+    /* Estilo do segundo botão */
     .button1 {
         display: inline-block;
         padding: 10px 63px;
@@ -208,19 +217,20 @@ blockquote {
         text-align: center;
         text-decoration: none;
         border-radius: 10px;
-        position: absolute; /* ou fixed, dependendo do seu caso */
-        transform: translate(320px, -50px);
-        z-index: 1100; /* maior que o z-index de outros elementos */
+        position: absolute;
+        transform: translate(0px, 150px); /* Ajuste para centralizar no layout mobile */
+        left: 50%; /* Centraliza horizontalmente */
+        transform: translateX(-50%); /* Garante a centralização */
+        z-index: 1100; 
         text-shadow: rgba(0, 0, 0, 0.856) 2px 2px 5px;
         box-shadow: rgba(0, 0, 0, 0.637) 2px 4px 5px;
     }
-    
+
     .button1:hover {
         background-color: #01580f;
     }
-    
-
 }
+
 .content.show {
     opacity: 1;
 }
