@@ -1,11 +1,17 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import {
+  createSecureId,
+  MAX_FEEDBACK_LENGTH,
+  sanitizeInput,
+  saveSecureFeedback,
+} from '../utils/security';
 
 type ChatAuthor = 'bot' | 'user';
 type ChatMode = 'root' | 'ods' | 'feedback';
 
 type ChatMessage = {
-  id: number;
+  id: string;
   author: ChatAuthor;
   text: string;
 };
@@ -15,9 +21,11 @@ type QuickAction = {
   onClick: () => void;
 };
 
+const FEEDBACK_RATE_LIMIT_MS = 5000;
+
 function createMessage(author: ChatAuthor, text: string): ChatMessage {
   return {
-    id: Date.now() + Math.floor(Math.random() * 1000),
+    id: createSecureId(),
     author,
     text,
   };
@@ -29,6 +37,8 @@ export default function AboutChat() {
   const [mode, setMode] = useState<ChatMode>('root');
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState('');
+  const [lastFeedbackAt, setLastFeedbackAt] = useState(0);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const messagesRef = useRef<HTMLDivElement | null>(null);
 
   const resetChat = () => {
@@ -78,39 +88,51 @@ export default function AboutChat() {
       ...current,
       createMessage(
         'bot',
-        'Digite seu feedback abaixo e clique em Enviar. Obrigado por contribuir com o projeto.',
+        `Digite seu feedback (até ${MAX_FEEDBACK_LENGTH} caracteres) e clique em Enviar. Obrigado por contribuir com o projeto.`,
       ),
     ]);
   };
 
-  const submitFeedback = () => {
-    const value = input.trim();
+  const submitFeedback = async () => {
+    const now = Date.now();
 
-    if (!value) {
+    if (now - lastFeedbackAt < FEEDBACK_RATE_LIMIT_MS) {
+      setMessages((current) => [
+        ...current,
+        createMessage('bot', 'Aguarde alguns segundos antes de enviar outro feedback.'),
+      ]);
       return;
     }
 
-    setMessages((current) => [
-      ...current,
-      createMessage('user', value),
-      createMessage('bot', 'Recebido. Valeu pelo feedback!'),
-    ]);
+    const value = sanitizeInput(input);
 
-    const currentItems = JSON.parse(
-      window.localStorage.getItem('proconsvate-feedbacks') ?? '[]',
-    ) as Array<{ text: string; at: string }>;
+    if (!value) {
+      setMessages((current) => [
+        ...current,
+        createMessage('bot', 'O feedback está vazio ou inválido. Revise e tente novamente.'),
+      ]);
+      return;
+    }
 
-    currentItems.push({
-      text: value,
-      at: new Date().toISOString(),
-    });
+    setIsSubmitting(true);
 
-    window.localStorage.setItem(
-      'proconsvate-feedbacks',
-      JSON.stringify(currentItems),
-    );
+    try {
+      await saveSecureFeedback({
+        text: value,
+        at: new Date().toISOString(),
+      });
 
-    setInput('');
+      setMessages((current) => [
+        ...current,
+        createMessage('user', value),
+        createMessage('bot', 'Recebido com segurança. Valeu pelo feedback!'),
+      ]);
+
+      setLastFeedbackAt(now);
+      setInput('');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const actions = useMemo<QuickAction[]>(() => {
@@ -231,16 +253,17 @@ export default function AboutChat() {
               value={input}
               onChange={(event) => setInput(event.target.value)}
               onKeyDown={(event) => {
-                if (event.key === 'Enter') {
-                  submitFeedback();
+                if (event.key === 'Enter' && !isSubmitting) {
+                  void submitFeedback();
                 }
               }}
               type="text"
               placeholder="Digite seu feedback..."
               autoComplete="off"
+              maxLength={MAX_FEEDBACK_LENGTH}
             />
-            <button type="button" onClick={submitFeedback}>
-              Enviar
+            <button type="button" onClick={() => void submitFeedback()} disabled={isSubmitting}>
+              {isSubmitting ? 'Enviando...' : 'Enviar'}
             </button>
           </div>
         ) : null}
